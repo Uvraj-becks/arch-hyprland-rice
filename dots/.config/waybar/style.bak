@@ -1,0 +1,81 @@
+@import url('/home/harry/.cache/wal/colors-waybar.css');
+
+* {
+    font-family: 'JetBrainsMono Nerd Font';
+    font-size: 16;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+	background: transparent;
+}
+/*
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+} */
+
+#workspaces button.active {
+	min-width: 50px;
+	color: @color1;
+	background: @color2;
+}
+
+#workspaces button {
+	transition: all 200ms ease-in-out;
+	padding: 0 5px;
+	margin: 0 2px;
+	color: #e8eaed;
+	background: #121212;
+	border-bottom: 3px solid transparent;
+}
+
+#clock {
+	font-weight: 700;
+	color: #e8eaed;
+}
+#group-player {
+	background-color: @color1;
+	border-radius: 16px 100px 100px 16px;
+	padding: 0 16px;
+}
+#tray {
+	padding: 2px;
+	background: @color2;
+	border-radius: 100px 16px 16px 100px;
+}
+
+
+
+window#waybar {
+	background: transparent;
+}
+
+
+
+#battery,
+#network
+#pulseaudio {
+	background-color: alpha(@color2, 0.8);
+	padding: 0 10px;
+	margin: 0 5px;
+	border-radius: 5px;
+}
+
+#pulseaudio {
+	background-color: alpha(@color2, 0.8);
+	padding: 0 10px;
+	margin: 0 2px;
+}
+
+#network {
+	background-color: alpha(@color2, 0.8);
+	margin: 0 2px;
+	padding: 0 10px;
+}	
+

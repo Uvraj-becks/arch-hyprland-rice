@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Define your wallpaper directory
+WALLPAPER_DIR="/home/harry/wallpapers"
+
+# Get a list of wallpapers and display them in Rofi
+# selected_wallpaper=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) -print0 | xargs -0 -n1 basename | rofi -dmenu -i -p "Select Wallpaper:")
+selected_wallpaper=$(for a in "$WALLPAPER_DIR"/*; do
+    echo -en "$(basename "${a%.*}")\0icon\x1f$a\n"
+done | rofi -dmenu -p " ")
+# If a wallpaper is selected, set it using swww
+if [ -n "$selected_wallpaper" ]; then
+    # Construct the full path to the selected wallpaper
+    full_path=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) -print0 | grep -zF "$selected_wallpaper" | head -n1 | tr -d '\0')
+    
+    if [ -n "$full_path" ]; then
+        swww img "$full_path" --transition-type any --transition-duration 2
+	wal -i "$full_path"
+	pywalfox update
+	~/.config/waybar/scripts/launch.sh
+    fi
+fi
