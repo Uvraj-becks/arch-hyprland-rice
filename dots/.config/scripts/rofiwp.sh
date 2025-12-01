@@ -15,9 +15,11 @@ SELECTED_WALL=$(for a in $(ls -t *.jpg *.png *.gif *.jpeg 2>/dev/null); do echo 
 SELECTED_PATH="$WALLPAPER_DIR/$SELECTED_WALL"
 
 # === SET WALLPAPER ===
+wal -i "$SELECTED_PATH"
 matugen image "$SELECTED_PATH"
 
 # === CREATE SYMLINK ===
 mkdir -p "$(dirname "$SYMLINK_PATH")"
 ln -sf "$SELECTED_PATH" "$SYMLINK_PATH"
+
 
