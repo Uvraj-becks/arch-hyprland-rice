@@ -1,7 +1,9 @@
 {
     "layer": "top",
-    "margin-top": 10,
+    // "margin-top": 10, // changed position to bottom
+    "margin-bottom": 10,
     "width": 1500,
+    "position": "bottom",
     "modules-left": ["hyprland/workspaces", "sway/mode"],
     "modules-center": ["clock"],
     "modules-right": ["battery", "pulseaudio", "network"],
