@@ -142,12 +142,12 @@ tooltip label {
 
 }
 
-
 /*-----Indicators-----*/
 #battery,
 #network,
 #pulseaudio,
-#custom-power {
+#custom-power,
+#bluetooth {
     background-color: @secondary;
     padding: 0 5px;
     /* margin: 0 5px; */
@@ -169,6 +169,6 @@ tooltip label {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-#pulseaudio {
+/* #pulseaudio {
     margin: 0 2px;
-}
+} */
