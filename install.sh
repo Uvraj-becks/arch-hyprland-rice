@@ -11,12 +11,16 @@ yay -S mpd
 yay -S wlogout
 yay -S waybar
 yay -S btop
+yay -S swyanc
+yay -S vencord
+yay -S zsh
+yay -S zsh-completitions
+yay -S zsh-syntax-highlighting
+yay -S zsh-autosuggestions
+yay -S fzf
+yay -S bat
+yay -S tty-clock
+yay -S oh-my-posh
+yay -S nautilus
+yay -S flatpak # to install vscodium, but can also modify .desktop file of vscodium installed using aur repo to 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
-
-# Copy or link dotfiles
-mkdir -p ~/.config/fastfetch
-mkdir -p ~/.config/matugen
-mkdir -p ~/.config/cava
-mkdir -p ~/.config/rofi
-mkdir -p ~/.config/waybar
-mkdir -p ~/.config/btop
