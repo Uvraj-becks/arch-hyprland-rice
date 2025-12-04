@@ -21,6 +21,8 @@ yay -S fzf
 yay -S bat
 yay -S tty-clock
 yay -S oh-my-posh
+yay -S zoxide
+yay -S pokemon-colorscripts-git
 yay -S nautilus
 yay -S flatpak # to install vscodium, but can also modify .desktop file of vscodium installed using aur repo to 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
