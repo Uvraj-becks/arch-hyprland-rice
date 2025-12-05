@@ -1,0 +1,145 @@
+/* @import "colors.css"; --> matugen, pywal has better colorpicker ig */
+@import url('../../.cache/wal/colors-waybar.css');
+
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-weight: bold;
+    /* font-size: 98%; */
+    font-size: 14;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+
+tooltip {
+    color: @inverse_surface;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+}
+
+tooltip {
+    background:@background;
+    color: @color7;
+}
+
+tooltip label {
+    color: @inverse_surface;
+}
+
+/* -----Modules----- */
+#workspaces button.active {
+    min-width: 50px;
+    /* color: @primary; */
+    color: #000000;
+    background: alpha(@primary_fixed, 0.75);
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#workspaces button {
+    transition: all 200ms ease-in-out;
+    padding: 0 5px;
+    margin: 0 2px;
+    color: @secondary;
+    background: @secondary;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces {
+    padding: 0px 5px;
+}
+
+#workspaces button.active {
+	min-width: 50px;
+	color: @color1;
+	background: @color2;
+}
+
+#workspaces button {
+	transition: all 200ms ease-in-out;
+	padding: 0 5px;
+	margin: 0 2px;
+	color: #e8eaed;
+	background: #121212;
+	border-bottom: 3px solid transparent;
+}
+
+#clock {
+    background-color: alpha(@color2, 0.8);
+    font-weight: 700;
+    padding: 0px 5px;
+    color: #e8eaed;
+    border-radius: 10px;background-color: alpha(@color2, 0.8);
+}
+
+#group-player {
+    background-color: @secondary;
+    border-radius: 16px 100px 100px 16px;
+    padding: 0 16px;
+}
+#tray{
+    background-color: alpha(@color2, 0.8);
+    padding: 0px 2.5px;
+    border-radius: 10px;
+    transition: all .3s ease; 
+
+}
+
+#custom-pacman{
+    background-color: alpha(@color2, 0.8);
+    padding: 0px 5px;
+    margin: 0 5px;
+    transition: all .3s ease;
+    color:@color7;
+    border-radius: 10px;
+
+}
+
+#battery.charging {
+    color: #26A65B;
+}
+
+#battery.warning:not(.charging) {
+    color: #ffbe61;
+}
+
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery,
+#network,
+#pulseaudio,
+#bluetooth {
+	background-color: alpha(@color2, 0.8);
+	padding: 0 10px;
+	margin: 0 5px;
+	border-radius: 15px;
+}
+
+#pulseaudio {
+	background-color: alpha(@color2, 0.8);
+	padding: 0 10px;
+	margin: 0 2px;
+}
+
+#network {
+	background-color: alpha(@color2, 0.8);
+	margin: 0 2px;
+	padding: 0 10px;
+}	
+/* #pulseaudio {
+    margin: 0 2px;
+} */

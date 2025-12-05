@@ -25,6 +25,17 @@ tooltip label {
 	color: @color1;
 	background: @color2;
 }
+/* #group-player {
+    background-color: @secondary;
+    border-radius: 16px 100px 100px 16px;
+    padding: 0 16px;
+} */
+
+/* #tray {
+    padding: 2px;
+    background: @secondary;
+    border-radius: 100px 16px 16px 100px;
+} */
 
 #workspaces button {
 	transition: all 200ms ease-in-out;
